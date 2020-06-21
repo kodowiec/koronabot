@@ -1,0 +1,37 @@
+{
+  "name": "koronabot",
+  "version": "1.6.16",
+  "description": "bot discordowy scrapujacy twittera MZ_GOV_PL zeby uzyskac informacje o ilosci zakazen koronawirusem",
+  "main": "koronabot.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kodowiec/koronabot.git"
+  },
+  "keywords": [
+    "koronabot",
+    "discord",
+    "discord.js",
+    "discord-bot",
+    "node-js"
+  ],
+  "author": "kodowiec",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kodowiec/koronabot/issues"
+  },
+  "homepage": "https://github.com/kodowiec/koronabot#readme",
+  "dependencies": {
+    "async": "^3.2.0",
+    "cheerio": "^1.0.0-rc.3",
+    "discord.js": "^11.5.1",
+    "https": "^1.0.0",
+    "long": "^4.0.0",
+    "regex": "^0.1.1",
+    "regexp": "^1.0.0",
+    "request": "^2.88.2"
+  },
+  "devDependencies": {}
+}
