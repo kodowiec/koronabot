@@ -17,7 +17,7 @@ var tweets = {},
 ///////////////////////////  CONFIGURE TWITTER HANDLERS /////////////////////////////////////////////////////
 var THandlers = [{
     name: 'Ministerstwo Zdrowia',
-    url: "https://twitter.com/MZ_GOV_PL?lang=en",
+    url: "https://nitter.net/MZ_GOV_PL?lang=en",
     keywords: "Liczba zakażonych koronawirusem:",
 }];
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -34,16 +34,16 @@ function monitorTt() {
         request({ url: item, pool: separateReqPool }, function (error, response, body) {
             try {
                 const $ = cheerio.load(body);
-                var turl = "https://twitter.com" + response.req.path;
+                var turl = "https://nitter.net" + response.req.path;
                 if (!tweets[turl].length) {
                     //FIRST LOAD
-                    for (let i = 0; i < $('div.js-tweet-text-container p').length; i++) {
-                        tweets[turl].push($('div.js-tweet-text-container p').eq(i).text());
+                    for (let i = 0; i < $('div.tweet-content').length; i++) {
+                        tweets[turl].push($('div.tweet-content').eq(i).text());
                     }
                 } else {
                     //EVERY OTHER TIME
-                    for (let i = 0; i < $('div.js-tweet-text-container p').length; i++) {
-                        const s_tweet = $('div.js-tweet-text-container p').eq(i).text();
+                    for (let i = 0; i < $('div.tweet-content').length; i++) {
+                        const s_tweet = $('div.tweet-content').eq(i).text();
                         //CHECK IF TWEET IS NEWS
                         if (tweets[turl].indexOf(s_tweet) === -1) {
                             tweets[turl].push(s_tweet);
@@ -142,7 +142,7 @@ function update() {
 //Startup:
 client.on("ready", () => {
     getDate();
-    console.log(`#ready ${cleanDate} ${cleanTime}#`);
+    console.log(`[${cleanDate} ${cleanTime}] ready`);
     monitorTt();
     client.setInterval(monitorTt, 60000);
 });

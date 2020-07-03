@@ -1,5 +1,5 @@
 {
     "name": "koronabot",
-    "description": "bot discordowy scrapujacy twittera MZ_GOV_PL zeby uzyskac informacje o ilosci zakazen koronawirusem",
+    "description": "bot discordowy scrapujacy twittera (przez nittera) MZ_GOV_PL zeby uzyskac informacje o ilosci zakazen koronawirusem",
     "repository": "https://github.com/kodowiec/koronabot/"
 }

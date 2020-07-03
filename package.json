@@ -1,7 +1,7 @@
 {
   "name": "koronabot",
-  "version": "1.6.16",
-  "description": "bot discordowy scrapujacy twittera MZ_GOV_PL zeby uzyskac informacje o ilosci zakazen koronawirusem",
+  "version": "1.7.03",
+  "description": "bot discordowy scrapujacy twittera (przez nittera) MZ_GOV_PL zeby uzyskac informacje o ilosci zakazen koronawirusem",
   "main": "koronabot.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
