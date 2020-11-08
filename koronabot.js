@@ -106,7 +106,7 @@ function update() {
         if (n.tweet != lastMessageSent) {
             lastMessageSent = n.tweet;
             if (n.tweet.includes("Liczba zakażonych koronawirusem")) {
-                const regex = /\d+\s\d+\/\d+\s\d+/gm;
+                const regex = /\d+\s\d+\/\d+\s?\d+/gm;
                 getDate();
                 while ((m = regex.exec(n.tweet)) !== null) {
                     if (m.index === regex.lastIndex) {
